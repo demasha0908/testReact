@@ -37,16 +37,16 @@ function createCardElement(product) {
 
      const maxDescriptionLength = 30;
      if (product.description.length > maxDescriptionLength) {
-        cardDescription.innerText = `${product.description.slice(0, maxDescriptionLength)}...`;
+        cardDescription.innerText = `${product.description.slice(0, maxDescriptionLength)}`;
         cardDescription.style.cursor = 'pointer';
  
          let DescriptionVisible = false;
          cardDescription.addEventListener('click', () => {
              if (DescriptionVisible) {
-                cardDescription.innerText = `${product.description.slice(0, maxDescriptionLength)}...${cardReadMore}`;
+                cardDescription.innerText = `${product.description.slice(0, maxDescriptionLength)}${cardReadMore}`;
 
              } else {
-                cardDescription.innerText = product.description;
+                cardDescription.innerText = `${product.description}${cardReadMore}`;
                 
              }
  
@@ -54,7 +54,6 @@ function createCardElement(product) {
          });
      } else {
         cardDescription.innerText = product.description;
-        cardReadMore.style.display = 'none'; 
      }
 
      cardCategory.textContent = product.category.name;
