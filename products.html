@@ -1,0 +1,52 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="ie=edge">
+        <title>Games project</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="css/products.css">
+    </head>
+    <body>
+        <div class="wrapper">
+        <div class="container">
+        <div class="products__card-load" data-loading>
+            <p class="card__loading-text">Loading...</p>
+            <p class="loading"></p>
+        </div>
+        <div class="products__cards">
+            <ul class="products__cards-container" data-products-list></ul>
+            <template data-card-template>
+                <div class="products__card">
+                    <div class="products__card-top">
+                            <img class="card__top-img" data-card-img src="">
+                        <div class="products__card-text">
+                            <h2 class="card__text-name" data-card-title></h3>
+                        <div class="card__description">
+                            <p class="card__text-desc" data-card-description><p class="read__more" data-card-read>Read More</p></p>
+                        </div>
+                            <button class="card__text-category" data-card-category></button>
+                        </div>
+                    </div>
+                    <div class="products__card-bottom">
+                        <ul class="product__bottom-buy">
+                            <li class="product__buy-price">
+                            <p class="product__buy-text">Price</p>
+                            <div class="product__buy-allprice"><p class="product__buy-dollar">$</p><p class="product__buy-accprice" data-card-price></p></div>
+                            </li>
+                            <li data-card-button>
+                                <button class="product__buy-btn">Add To Cart</button>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </template>
+        </div>
+    </div>
+</div>
+        <script src="./scripts/products.js"></script>
+    </body>
+</html>
